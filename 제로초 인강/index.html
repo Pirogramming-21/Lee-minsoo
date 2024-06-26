@@ -1,11 +1,180 @@
+<!DOCTYPE html>
 <html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>NAVER</title>
     <link rel="shortcut icon" type="image/x-icon" href="./favicon.ico">
+    <title>NAVER</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html, body {
+            margin: 0;
+            padding: 0;
+        }
+        #wrap {
+            width: 100%;
+        }
+        #wrap-center {
+            width: 1280px;
+            position: relative; /* 추가 */
+            margin: 0 auto; /* 가운데 정렬 */
+        }
+        #header {
+            position: relative;
+            height: 64px;
+        }
+        #hamburger {
+            margin-top: 18px;
+            padding: 10px;
+            position: absolute; 
+            left: -10px;
+            display: inline-block;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        #hamburger:hover {
+            background-color: gray;
+            border-radius: 50%;
+        }
+        #hamburger > div {
+            background-image: url(./sp_main.png);
+            width: 26px;
+            height: 26px;
+            background-repeat: no-repeat;
+            background-size: 422px 405px;
+            background-position: -335px -284px;
+        }
+        #naverpay {
+            margin-top: 18px;
+            padding: 10px 8px;
+            position: absolute; 
+            right: 42px;
+            display: inline-block;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        #naverpay:hover {
+            background-color: gray;
+            border-radius: 50%;
+        }
+        #naverpay > div {
+            background-image: url(./sp_main.png);
+            width: 30px;
+            height: 26px;
+            background-repeat: no-repeat;
+            background-size: 422px 405px;
+            background-position: -31px -316px;
+        }
+        #notice {
+            margin-top: 18px;
+            padding: 10px;
+            position: absolute; 
+            right: -10px;
+            display: inline-block;
+            background: none;
+            border: none;
+            cursor: pointer;
+        }
+        #notice:hover {
+            background-color: gray;
+            border-radius: 50%;
+        }
+        #notice > div {
+            background-image: url(./sp_main.png);
+            width: 26px;
+            height: 26px;
+            background-repeat: no-repeat;
+            background-size: 422px 405px;
+            background-position: -364px -27px;
+        }
+        #main {
+            height: 2000px;
+        }
+        .blind {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-    <div>안녕하세요</div>
+    <style>
+        #search {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100px; /* 필요에 따라 높이 설정 */
+        }
+        #search > form {
+            display: flex;
+            align-items: center;
+            width: 708px;
+            height: 60px;
+            border: 1px solid #03c75a;
+            border-radius: 33px; /* 적절한 높이 설정 */
+            text-align: left;
+            position: relative; /* 추가 */
+        }
+        #search > form > img {
+            width: 24px;
+            height: 24px;
+            margin-left: 10px;
+        }
+        #search > form > input {
+            width: 480px; /* 적절한 너비 설정 */
+            height: 100%;
+            padding: 17px 0;
+            font-size: 2rem;
+            line-height: 24px;
+            font-weight: bold;
+            border: none;
+            outline: none;
+            margin-left: 10px;
+        }
+        .sch_btn_region.sch_greendot::before {
+            content: "";
+            display: block;
+            width: 42px;
+            height: 42px;
+            background-image: url(https://s.pstatic.net/static/www/m-new/uit/img/sp_main_search_b79b10fe.png);
+            background-size: 323px 234px;
+            background-repeat: no-repeat;
+            background-position: -241px -145px;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            right: 10px; /* 적절한 위치 설정 */
+        }
+    </style>
+    <div id="wrap">
+        <div id="wrap-center">
+            <div id="header">
+                <button id="hamburger">
+                    <div></div>
+                    <span class="blind">확장 영역</span>
+                </button>
+                <button id="naverpay">
+                    <div></div>
+                    <span class="blind">네이버 페이</span>
+                </button>
+                <button id="notice">
+                    <div></div>
+                    <span class="blind">알림</span>
+                </button>
+            </div>
+            <div id="search">
+                <form action="">
+                    <img src="./favicon.ico" alt="Search Icon">
+                    <label for="search-input" class="blind">검색어 입력</label>
+                    <input type="text" id="search-input" placeholder="검색어를 입력하세요">
+                    <span class="sch_btn_region sch_greendot"></span>
+                </form>
+            </div>
+            <div id="nav"></div>
+            <div id="main"></div>
+        </div>
+    </div>
 </body>
 </html>
