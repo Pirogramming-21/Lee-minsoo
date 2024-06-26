@@ -9,7 +9,7 @@
         * {
             box-sizing: border-box;
         }
-        html, body {
+        html, body, form {
             margin: 0;
             padding: 0;
         }
@@ -172,8 +172,185 @@
                     <span class="sch_btn_region sch_greendot"></span>
                 </form>
             </div>
-            <div id="nav"></div>
-            <div id="main"></div>
+
+            <style>
+                #nav > ul {
+                    display: flex;
+                    list-style-type: none;
+                    justify-content: center;
+                    font-size: 1.4rem;
+                    line-height: 20px;
+                }
+                #nav a {
+                    text-decoration: none;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    color: black; /* 기본 글자 색상 */
+                }
+                #nav a div {
+                    width: 44px;
+                    height: 44px;
+                    margin: 0 auto;
+                }
+                #nav a div::after {
+                    content: '';
+                    display: inline-block;
+                    background-image: url(sp_main.png);
+                    background-size: 422px 405px;
+                    background-position: -250px -90px;
+                    background-repeat: no-repeat;
+                    width: 44px;
+                    height: 44px;
+                }
+                #nav a:visited {
+                    color: black; 
+                }
+                #nav li {
+                    width: 64px;
+                    margin-left: 4px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                }
+                #nav li:nth-of-type(1) a div::after {
+                    margin-left: 0px;
+                    background-position: -250px -90px;
+                }
+                #nav li:nth-of-type(2) a div::after {
+                    background-position: -250px 0px;
+                }
+                #nav li:nth-of-type(3) a div::after {
+                    background-position: -201px -98px;
+                }
+                #nav li:nth-of-type(4) a div::after {
+                    background-position: -90px -209px;
+                }
+                #nav li:nth-of-type(5) a div::after {
+                    background-position: 0px -209px;
+                }
+                #nav li:nth-of-type(6) a div::after {
+                    background-position: -180px -209px;
+                }
+                #nav li:nth-of-type(7) a div::after {
+                    background-position: -45px -209px;
+                }
+                #nav li:nth-of-type(8) a div::after {
+                    background-position: -201px 0px;
+                }
+                #nav li:nth-of-type(9) a div::after {
+                    background-position: -225px -209px;
+                }
+                #nav li:nth-of-type(10) a div::after {
+                    background-position: -250px -135px;
+                }
+
+            </style>
+
+            <div id="nav">
+                <ul>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>메일</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>카페</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>블로그</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>쇼핑</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>뉴스</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>증권</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>부동산</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>지도</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span>웹툰</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <div></div>
+                            <span></span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <style>
+                #main{
+                    display: flex;
+                }
+                #main-left{
+                    width: 830px;
+                    margin-right: 30px;
+
+                }
+                #main-right{
+                    width: 420px;
+                }
+                #main-left-ad, #main-right-ad{
+                    background-color: gray;
+                }
+                aside[id$=ad]{
+                    border-radius: 8px;
+                }
+                #main-left-ad{
+                    height: 130px;
+                }
+                #main-right-ad{
+                    height: 240px;
+                }
+
+            </style>
+            <main id="main">
+                <div id="main-left">
+                    <aside id="main-left-ad"></aside>
+                    <section id="main-newstand"></section>
+                    <section id="main-shopping"></section>
+                </div>
+                <div id="main-right">
+                    <section id="mainlogin"></section>
+                    <aside id="main-right-ad"></aside>
+                    <section id="main-weather"></section>
+                    <section id="main-stock"></section>
+                </div>
+            </main>
         </div>
     </div>
 </body>
