@@ -1,0 +1,110 @@
+body{
+    /* height을 body에 기본적으로 100vh로 설정해주자 */
+    height: 100vh; 
+
+    display: flex;
+
+    position: relative;
+   
+    justify-content: center;
+    align-items: center;
+
+
+}
+
+.header {
+    text-align: center;
+}
+
+
+.container{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    width: 60%;
+
+
+}
+
+.stopwatch{
+    background-color: gainsboro;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+
+
+}
+
+.records{
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#time {
+    font-size: 48px;
+}
+
+.button_container {
+    display: flex;
+}
+
+button {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#startStopBtn {
+    background-color: lightgreen;
+}
+
+#resetBtn {
+    background-color: lightcoral;
+}
+
+#lapBtn {
+    background-color: lightblue;
+}
+
+.records ul {
+    list-style: none;
+    padding: 0;
+}
+
+.records li {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+
+.recordTitle{
+    background-color: gainsboro;
+}
+
+
+.individual{
+    background-color: white;
+}
+
+.individual h3{
+    /* 이렇게 글자 요소에 width 와 text-align을 같이 줘야 함 */
+    text-align: center;
+    width: 100%;
+
+}
+
+ul{
+    list-style: none;
+}
