@@ -1,3 +1,4 @@
+/* body  */
 body {
     height: 100vh;
     display: flex;
@@ -7,22 +8,29 @@ body {
     margin: 0;
 }
 
+
+/* header */
 header {
     display: flex;
     justify-content: center;
     align-items: center;
+    width: 100%;
 }
 
 .fa-clock{
     margin-right: 10px;
 }
 
+/* container */
 .container {
     display: flex;
     flex-direction: column;
     width: 60%;
+    max-width: 300px;
 }
 
+
+/* stopwatch */
 .stopwatch {
     background-color: gainsboro;
     border-radius: 20px;
@@ -30,12 +38,24 @@ header {
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 20px;
+    align-items: center;
+    justify-content: center;
+    position: sticky; /* 추가 */
+    top: 20px;
+    z-index: 1000; /* 추가 */
 }
 
 #time{
-    padding-left: 40px;
 
+    text-align: center;
+    font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 8ch;
+    padding-left: 30px;
 }
+
+
+/* container */
 
 .records {
     display: flex;
@@ -48,12 +68,6 @@ header {
     padding-right: 20px;
 }
 
-#time {
-    font-size: 48px;
-    font-family: 'Courier New', Courier, monospace;
-    width: 8ch;
-    text-align: center;
-}
 
 .button_container {
     display: flex;
@@ -97,6 +111,9 @@ button {
     padding-left: 20px;
     padding-right: 20px;
     border-radius: 20px;
+    position: sticky; /* 추가 */
+    top: 170px; /* 추가, stopwatch의 높이보다 약간 더 높게 설정 */
+    z-index: 1000; /* 추가 */
 }
 
 .individual {
