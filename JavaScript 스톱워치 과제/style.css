@@ -1,43 +1,43 @@
-body{
-    /* height을 body에 기본적으로 100vh로 설정해주자 */
-    height: 100vh; 
-
+body {
+    height: 100vh;
     display: flex;
-
     position: relative;
-   
     justify-content: center;
     align-items: center;
-
-
+    margin: 0;
 }
 
-.header {
-    text-align: center;
-}
-
-
-.container{
+header {
     display: flex;
-    position: absolute;
+    justify-content: center;
+    align-items: center;
+}
+
+.fa-clock{
+    margin-right: 10px;
+}
+
+.container {
+    display: flex;
     flex-direction: column;
     width: 60%;
-
-
 }
 
-.stopwatch{
+.stopwatch {
     background-color: gainsboro;
     border-radius: 20px;
     text-align: center;
     padding-top: 20px;
     padding-bottom: 20px;
     margin-bottom: 20px;
+}
 
+#time{
+    padding-left: 40px;
 
 }
 
-.records{
+.records {
     display: flex;
     flex-direction: column;
     border-radius: 20px;
@@ -50,6 +50,9 @@ body{
 
 #time {
     font-size: 48px;
+    font-family: 'Courier New', Courier, monospace;
+    width: 8ch;
+    text-align: center;
 }
 
 .button_container {
@@ -85,26 +88,76 @@ button {
 .records li {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin: 5px 0;
 }
 
-
-.recordTitle{
+.recordTitle {
     background-color: gainsboro;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px;
 }
 
-
-.individual{
+.individual {
     background-color: white;
 }
 
-.individual h3{
-    /* 이렇게 글자 요소에 width 와 text-align을 같이 줘야 함 */
-    text-align: center;
-    width: 100%;
-
+.recordTitle, .individual {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* 버튼들을 왼쪽으로 정렬 */
+    padding: 10px 20px;
+    border-radius: 20px;
+    margin-bottom: 5px;
 }
 
-ul{
+.individual h3 {
+    text-align: center;
+    width: 50%;
+}
+
+ul {
     list-style: none;
 }
+
+
+.deleteAll {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.listButton {
+
+    background: none;
+    border: 2px solid black;
+    cursor: pointer;
+    width: 24px;  /* 원형이 되도록 너비와 높이를 동일하게 설정 */
+    height: 24px; /* 원형이 되도록 너비와 높이를 동일하게 설정 */
+    border-radius: 50%; /* 원형 모양으로 만들기 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box; /* 패딩 및 보더를 포함한 크기 설정 */
+    padding: 0; /* 기본 패딩 제거 */
+    margin: 0; /* 기본 마진 제거 */
+}
+
+.listButton::after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: black;
+    display: none;
+}
+
+.listButton.checked::after {
+    display: block;
+}
+
+
+

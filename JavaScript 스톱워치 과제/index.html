@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stop Watch</title>
     <link rel="stylesheet" href="style.css">
-    <script src = "script.js" ></script>
+    <script src="script.js" defer></script>
+    <script src="https://kit.fontawesome.com/0fd79594aa.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <img src="timer_icon" alt="">
+            <i class="fa-solid fa-clock"></i>
             <h1>피로그래밍 스톱워치</h1>
         </header>
         <div class="stopwatch">
@@ -21,23 +22,12 @@
         </div>
         <div class="records">
             <ul class="recordList">
-                <li class = "recordTitle" >
-                    <button class="listButton" id = "selectAll"></button>
+                <li class="recordTitle">
+                    <button class="listButton" id="selectAll"></button>
                     <h3>구간기록</h3>
-                    <button class="delete"></button>
+                    <button class="deleteAll"><i class="fa-solid fa-trash"></i></button>
                 </li>
-                <li class = "individual">
-                    <button class="listButton"></button>
-                    <h3>01:47</h3>
-                </li>
-                <li class = "individual">
-                    <button class="listButton"></button>
-                    <h3>01:47</h3>
-                </li>
-                <li class = "individual">
-                    <button class="listButton"></button>
-                    <h3>01:47</h3>
-                </li>
+                <!-- Dynamic list items will be appended here -->
             </ul>
         </div>
     </div>
