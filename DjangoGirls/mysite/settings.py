@@ -55,7 +55,7 @@ ROOT_URLCONF = 'mysite.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [],  # 여기에 템플릿 경로 추가
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
