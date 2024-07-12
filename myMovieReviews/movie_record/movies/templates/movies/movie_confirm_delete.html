@@ -1,10 +1,9 @@
 {% extends 'movies/base.html' %}
-
 {% block content %}
-<h1>Are you sure you want to delete "{{ movie.title }}"?</h1>
-<form method="post">
+  <h2>영화를 삭제하시겠습니까?</h2>
+  <form method="post">
     {% csrf_token %}
-    <button type="submit">Yes, delete</button>
-    <a href="{% url 'movie_detail' movie.pk %}">Cancel</a>
-</form>
+    <button type="submit">삭제</button>
+    <a href="{% url 'movie_detail' movie.pk %}">취소</a>
+  </form>
 {% endblock %}

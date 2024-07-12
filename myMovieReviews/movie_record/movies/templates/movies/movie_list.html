@@ -1,6 +1,4 @@
 {% extends 'movies/base.html' %}
-{% load static %}
-
 {% block content %}
 <div class="movie-list">
     {% for movie in movies %}
@@ -11,6 +9,8 @@
         <p>개봉년도: {{ movie.release_date.year }}년</p>
         <p>장르: {{ movie.genre }}</p>
         <p>별점: {{ movie.rating }}</p>
+        <a href="{% url 'movie_update' movie.pk %}">수정</a>
+        <a href="{% url 'movie_delete' movie.pk %}">삭제</a>
     </div>
     {% endfor %}
 </div>
