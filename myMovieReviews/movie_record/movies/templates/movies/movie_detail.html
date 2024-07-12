@@ -1,0 +1,21 @@
+{% extends 'movies/base.html' %}
+{% block content %}
+  <h2>{{ movie.title }}</h2>
+  <p>{{ movie.description }}</p>
+  <p>Release Date: {{ movie.release_date }}</p>
+  <p>Director: {{ movie.director }}</p>
+
+  <h3>Comments</h3>
+  <ul>
+    {% for comment in comments %}
+      <li>{{ comment.content }} - {{ comment.created_at }}</li>
+    {% endfor %}
+  </ul>
+
+  <h3>Add a comment</h3>
+  <form method="post" action="{% url 'add_comment' movie.pk %}">
+    {% csrf_token %}
+    {{ comment_form.as_p }}
+    <button type="submit">Add Comment</button>
+  </form>
+{% endblock %}
